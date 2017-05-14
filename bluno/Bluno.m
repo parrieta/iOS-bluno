@@ -58,6 +58,10 @@
     }
 }
 
+- (BOOL)connected {
+    return self.device != nil ;
+}
+
 - (NSArray<Pin*> *)pins {
     return self.device ? self.board.pins : nil ;
 }
@@ -69,7 +73,7 @@
         }
 
         Pin *pin = [self.board setMode:*(cmd->args->arg2) pin:cmd->args->arg1] ;
-        if (self.delegate && pin) {
+        if (self.delegate && pin && [self.delegate respondsToSelector:@selector(didChangeMode:)]) {
             [self.delegate didChangeMode:pin] ;
         }
         
@@ -82,7 +86,7 @@
         }
         
         Pin *pin = [self.board setValue:*(cmd->args->arg2) pin:cmd->args->arg1] ;
-        if (self.delegate && pin) {
+        if (self.delegate && pin && [self.delegate respondsToSelector:@selector(didChangeValue:)]) {
             [self.delegate didChangeValue:pin] ;
         }
         
@@ -95,7 +99,7 @@
         }
         
         Pin *pin = [self.board inputValueDigital:*(cmd->args->arg2) pin:cmd->args->arg1] ;
-        if (self.delegate && pin) {
+        if (self.delegate && pin && [self.delegate respondsToSelector:@selector(didChangeValue:)]) {
             [self.delegate didChangeValue:pin] ;
         }
         
@@ -108,7 +112,7 @@
         }
         
         Pin *pin = [self.board inputValueAnalog:*(cmd->args->arg2) pin:cmd->args->arg1] ;
-        if (self.delegate && pin) {
+        if (self.delegate && pin && [self.delegate respondsToSelector:@selector(didChangeValue:)]) {
             [self.delegate didChangeValue:pin] ;
         }
         

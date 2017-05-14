@@ -23,7 +23,6 @@
 		C45281EA1EC49C880069CDF2 /* TagTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C45281E41EC49C880069CDF2 /* TagTest.m */; };
 		C4600A861EACD0EC006904B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600A851EACD0EC006904B9 /* main.m */; };
 		C4600A891EACD0EC006904B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600A881EACD0EC006904B9 /* AppDelegate.m */; };
-		C4600A8C1EACD0EC006904B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600A8B1EACD0EC006904B9 /* ViewController.m */; };
 		C4600A8F1EACD0EC006904B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4600A8D1EACD0EC006904B9 /* Main.storyboard */; };
 		C4600A911EACD0EC006904B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4600A901EACD0EC006904B9 /* Assets.xcassets */; };
 		C4600A941EACD0EC006904B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4600A921EACD0EC006904B9 /* LaunchScreen.storyboard */; };
@@ -31,13 +30,15 @@
 		C4600AB01EACD647006904B9 /* BLEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600AAF1EACD647006904B9 /* BLEUtility.m */; };
 		C4600AB61EACD877006904B9 /* DFBlunoDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600AB51EACD877006904B9 /* DFBlunoDevice.m */; };
 		C4600AB91EACD973006904B9 /* DFBlunoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600AB81EACD973006904B9 /* DFBlunoManager.m */; };
-		C4600ABC1EACE90A006904B9 /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600ABB1EACE90A006904B9 /* ScanController.m */; };
+		C461CDF01EC8A86700A2CB11 /* PinIOController.m in Sources */ = {isa = PBXBuildFile; fileRef = C461CDEF1EC8A86700A2CB11 /* PinIOController.m */; };
+		C461CDF31EC8A8B900A2CB11 /* InfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = C461CDF21EC8A8B900A2CB11 /* InfoController.m */; };
+		C461CDF61EC8AE5C00A2CB11 /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = C461CDF51EC8AE5C00A2CB11 /* ScanController.m */; };
+		C461CDFA1EC8AECC00A2CB11 /* PinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C461CDF91EC8AECC00A2CB11 /* PinCell.m */; };
 		C46D79CB1EC654C600C6B75A /* BlunoCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C46D79CA1EC654C600C6B75A /* BlunoCommand.m */; };
 		C46D79CE1EC65C4A00C6B75A /* Pin.m in Sources */ = {isa = PBXBuildFile; fileRef = C46D79CD1EC65C4A00C6B75A /* Pin.m */; };
 		C46D79D11EC6618000C6B75A /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = C46D79D01EC6617F00C6B75A /* Board.m */; };
 		C4AABFE51EC6EA7800106E0E /* BlunoCommand+Commands.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AABFE41EC6EA7800106E0E /* BlunoCommand+Commands.m */; };
 		C4AABFEB1EC6F41400106E0E /* Bluno.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AABFEA1EC6F41400106E0E /* Bluno.m */; };
-		C4AABFEE1EC797A200106E0E /* PinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AABFED1EC797A200106E0E /* PinCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,8 +81,6 @@
 		C4600A851EACD0EC006904B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4600A871EACD0EC006904B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4600A881EACD0EC006904B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C4600A8A1EACD0EC006904B9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C4600A8B1EACD0EC006904B9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C4600A8E1EACD0EC006904B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4600A901EACD0EC006904B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4600A931EACD0EC006904B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,8 +95,14 @@
 		C4600AB51EACD877006904B9 /* DFBlunoDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFBlunoDevice.m; sourceTree = "<group>"; };
 		C4600AB71EACD973006904B9 /* DFBlunoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFBlunoManager.h; sourceTree = "<group>"; };
 		C4600AB81EACD973006904B9 /* DFBlunoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFBlunoManager.m; sourceTree = "<group>"; };
-		C4600ABA1EACE90A006904B9 /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
-		C4600ABB1EACE90A006904B9 /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
+		C461CDEE1EC8A86700A2CB11 /* PinIOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinIOController.h; sourceTree = "<group>"; };
+		C461CDEF1EC8A86700A2CB11 /* PinIOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinIOController.m; sourceTree = "<group>"; };
+		C461CDF11EC8A8B900A2CB11 /* InfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoController.h; sourceTree = "<group>"; };
+		C461CDF21EC8A8B900A2CB11 /* InfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoController.m; sourceTree = "<group>"; };
+		C461CDF41EC8AE5C00A2CB11 /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
+		C461CDF51EC8AE5C00A2CB11 /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
+		C461CDF81EC8AECC00A2CB11 /* PinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinCell.h; sourceTree = "<group>"; };
+		C461CDF91EC8AECC00A2CB11 /* PinCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinCell.m; sourceTree = "<group>"; };
 		C46D79C81EC6518800C6B75A /* arduino.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arduino.h; sourceTree = "<group>"; };
 		C46D79C91EC654C600C6B75A /* BlunoCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlunoCommand.h; sourceTree = "<group>"; };
 		C46D79CA1EC654C600C6B75A /* BlunoCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlunoCommand.m; sourceTree = "<group>"; };
@@ -109,8 +114,6 @@
 		C4AABFE41EC6EA7800106E0E /* BlunoCommand+Commands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BlunoCommand+Commands.m"; sourceTree = "<group>"; };
 		C4AABFE91EC6F41400106E0E /* Bluno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bluno.h; sourceTree = "<group>"; };
 		C4AABFEA1EC6F41400106E0E /* Bluno.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bluno.m; sourceTree = "<group>"; };
-		C4AABFEC1EC797A200106E0E /* PinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinCell.h; sourceTree = "<group>"; };
-		C4AABFED1EC797A200106E0E /* PinCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +192,8 @@
 		C4600A831EACD0EC006904B9 /* bluno */ = {
 			isa = PBXGroup;
 			children = (
+				C461CDF71EC8AEA000A2CB11 /* views */,
+				C461CDED1EC8A82E00A2CB11 /* controllers */,
 				C46D79C71EC6513900C6B75A /* Arduino */,
 				C45281C21EC49BA90069CDF2 /* packet-parser */,
 				C45281D81EC49BCF0069CDF2 /* command */,
@@ -197,12 +202,6 @@
 				C4AABFEA1EC6F41400106E0E /* Bluno.m */,
 				C4600A871EACD0EC006904B9 /* AppDelegate.h */,
 				C4600A881EACD0EC006904B9 /* AppDelegate.m */,
-				C4600A8A1EACD0EC006904B9 /* ViewController.h */,
-				C4600A8B1EACD0EC006904B9 /* ViewController.m */,
-				C4AABFEC1EC797A200106E0E /* PinCell.h */,
-				C4AABFED1EC797A200106E0E /* PinCell.m */,
-				C4600ABA1EACE90A006904B9 /* ScanController.h */,
-				C4600ABB1EACE90A006904B9 /* ScanController.m */,
 				C4600A8D1EACD0EC006904B9 /* Main.storyboard */,
 				C4600A901EACD0EC006904B9 /* Assets.xcassets */,
 				C4600A921EACD0EC006904B9 /* LaunchScreen.storyboard */,
@@ -255,6 +254,28 @@
 				C4600AAF1EACD647006904B9 /* BLEUtility.m */,
 			);
 			path = BLE;
+			sourceTree = "<group>";
+		};
+		C461CDED1EC8A82E00A2CB11 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C461CDF11EC8A8B900A2CB11 /* InfoController.h */,
+				C461CDF21EC8A8B900A2CB11 /* InfoController.m */,
+				C461CDF41EC8AE5C00A2CB11 /* ScanController.h */,
+				C461CDF51EC8AE5C00A2CB11 /* ScanController.m */,
+				C461CDEE1EC8A86700A2CB11 /* PinIOController.h */,
+				C461CDEF1EC8A86700A2CB11 /* PinIOController.m */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		C461CDF71EC8AEA000A2CB11 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C461CDF81EC8AECC00A2CB11 /* PinCell.h */,
+				C461CDF91EC8AECC00A2CB11 /* PinCell.m */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		C46D79C71EC6513900C6B75A /* Arduino */ = {
@@ -372,12 +393,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C461CDF31EC8A8B900A2CB11 /* InfoController.m in Sources */,
+				C461CDFA1EC8AECC00A2CB11 /* PinCell.m in Sources */,
 				C45281DD1EC49BCF0069CDF2 /* Arg.c in Sources */,
 				C4600AB01EACD647006904B9 /* BLEUtility.m in Sources */,
-				C4600A8C1EACD0EC006904B9 /* ViewController.m in Sources */,
 				C45281D41EC49BA90069CDF2 /* pt_coder.c in Sources */,
 				C45281D21EC49BA90069CDF2 /* BYTE.c in Sources */,
-				C4AABFEE1EC797A200106E0E /* PinCell.m in Sources */,
 				C45281D51EC49BA90069CDF2 /* SEQUENCE.c in Sources */,
 				C4AABFEB1EC6F41400106E0E /* Bluno.m in Sources */,
 				C45281D71EC49BA90069CDF2 /* tlv_tag.c in Sources */,
@@ -386,13 +407,14 @@
 				C46D79D11EC6618000C6B75A /* Board.m in Sources */,
 				C46D79CB1EC654C600C6B75A /* BlunoCommand.m in Sources */,
 				C45281DE1EC49BCF0069CDF2 /* Command.c in Sources */,
+				C461CDF01EC8A86700A2CB11 /* PinIOController.m in Sources */,
 				C45281D31EC49BA90069CDF2 /* BYTE_STRING.c in Sources */,
 				C4600AAD1EACD5E7006904B9 /* BLEDevice.m in Sources */,
 				C4AABFE51EC6EA7800106E0E /* BlunoCommand+Commands.m in Sources */,
-				C4600ABC1EACE90A006904B9 /* ScanController.m in Sources */,
 				C4600AB91EACD973006904B9 /* DFBlunoManager.m in Sources */,
 				C46D79CE1EC65C4A00C6B75A /* Pin.m in Sources */,
 				C4600A891EACD0EC006904B9 /* AppDelegate.m in Sources */,
+				C461CDF61EC8AE5C00A2CB11 /* ScanController.m in Sources */,
 				C4600A861EACD0EC006904B9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

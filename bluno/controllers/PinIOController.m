@@ -6,28 +6,23 @@
 //  Copyright © 2017 Pavel Tsybulin. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "ScanController.h"
+#import "PinIOController.h"
 #import "Bluno.h"
 #import "PinCell.h"
 
-@interface ViewController () <BlunoDelegate, PinCellDelegate, UITableViewDataSource, UITableViewDelegate> {
-    BOOL connected ;
+@interface PinIOController () <BlunoDelegate, PinCellDelegate, UITableViewDataSource, UITableViewDelegate> {
 }
 
-@property (weak, nonatomic) IBOutlet UILabel *lblStatus ;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) Bluno *bluno ;
 
 @end
 
-@implementation ViewController
+@implementation PinIOController
 
 - (void)viewDidLoad {
     [super viewDidLoad] ;
     
-    connected = NO ;
-    self.lblStatus.text = @"Not Ready" ;
     self.bluno = [Bluno bluno] ;
     self.bluno.delegate = self ;
 }
@@ -36,15 +31,10 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Actions
-
-- (IBAction)onScan:(id)sender {
-    [self.bluno close] ;
-    [self performSegueWithIdentifier:@"scan" sender:self] ;
-}
-
-- (IBAction)onClose:(id)sender {
-    [self.bluno disconnect] ;
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated] ;
+    self.bluno.delegate = self ;
+    [self.tableView reloadData] ;
 }
 
 #pragma mark - <PinCellDelegate>
@@ -67,25 +57,13 @@
     }) ;
 }
 
-#pragma mark - Navigation
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"scan"]) {
-        ((ScanController *)segue.destinationViewController).devices = self.bluno.devices ;
-    }
-}
-
 #pragma mark - <BlunoDelegate>
 
 - (void)didConnectDevice {
-    self.lblStatus.text = @"Ready" ;
-    connected = YES ;
     [self.tableView reloadData] ;
 }
 
 - (void)didDisconnectDevice {
-    connected = NO ;
-    self.lblStatus.text = @"Not Ready" ;
     [self.tableView reloadData] ;
 }
 
@@ -116,7 +94,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSInteger numOfSections = 0 ;
-    if (connected) {
+    if ([self.bluno connected]) {
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine ;
         numOfSections = 1 ;
         self.tableView.backgroundView = nil ;
@@ -133,7 +111,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return connected && section == 0 ? self.bluno.pins.count : 0 ;
+    return [self.bluno connected] && section == 0 ? self.bluno.pins.count : 0 ;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

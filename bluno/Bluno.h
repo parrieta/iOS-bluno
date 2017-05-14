@@ -14,6 +14,9 @@
 
 - (void)didConnectDevice ;
 - (void)didDisconnectDevice ;
+
+@optional
+
 - (void)didChangeMode:(Pin *)pin ;
 - (void)didChangeValue:(Pin *)pin ;
 
@@ -31,6 +34,7 @@
 
 - (void)close ;
 - (void)disconnect ;
+- (BOOL)connected ;
 
 - (void)setMode:(PinMode)mode forPin:(Pin *)pin ;
 - (void)setValue:(NSInteger)value forPin:(Pin *)pin ;
