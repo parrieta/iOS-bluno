@@ -7,18 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C45281D21EC49BA90069CDF2 /* BYTE.c in Sources */ = {isa = PBXBuildFile; fileRef = C45281C31EC49BA90069CDF2 /* BYTE.c */; };
+		C45281D31EC49BA90069CDF2 /* BYTE_STRING.c in Sources */ = {isa = PBXBuildFile; fileRef = C45281C51EC49BA90069CDF2 /* BYTE_STRING.c */; };
+		C45281D41EC49BA90069CDF2 /* pt_coder.c in Sources */ = {isa = PBXBuildFile; fileRef = C45281C91EC49BA90069CDF2 /* pt_coder.c */; };
+		C45281D51EC49BA90069CDF2 /* SEQUENCE.c in Sources */ = {isa = PBXBuildFile; fileRef = C45281CC1EC49BA90069CDF2 /* SEQUENCE.c */; };
+		C45281D61EC49BA90069CDF2 /* tlv_len.c in Sources */ = {isa = PBXBuildFile; fileRef = C45281CE1EC49BA90069CDF2 /* tlv_len.c */; };
+		C45281D71EC49BA90069CDF2 /* tlv_tag.c in Sources */ = {isa = PBXBuildFile; fileRef = C45281D01EC49BA90069CDF2 /* tlv_tag.c */; };
+		C45281DD1EC49BCF0069CDF2 /* Arg.c in Sources */ = {isa = PBXBuildFile; fileRef = C45281D91EC49BCF0069CDF2 /* Arg.c */; };
+		C45281DE1EC49BCF0069CDF2 /* Command.c in Sources */ = {isa = PBXBuildFile; fileRef = C45281DB1EC49BCF0069CDF2 /* Command.c */; };
+		C45281E51EC49C880069CDF2 /* ArgTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C45281DF1EC49C880069CDF2 /* ArgTest.m */; };
+		C45281E61EC49C880069CDF2 /* BYTE_STRINGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C45281E01EC49C880069CDF2 /* BYTE_STRINGTest.m */; };
+		C45281E71EC49C880069CDF2 /* BYTETest.m in Sources */ = {isa = PBXBuildFile; fileRef = C45281E11EC49C880069CDF2 /* BYTETest.m */; };
+		C45281E81EC49C880069CDF2 /* CommandTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C45281E21EC49C880069CDF2 /* CommandTest.m */; };
+		C45281E91EC49C880069CDF2 /* LenTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C45281E31EC49C880069CDF2 /* LenTest.m */; };
+		C45281EA1EC49C880069CDF2 /* TagTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C45281E41EC49C880069CDF2 /* TagTest.m */; };
 		C4600A861EACD0EC006904B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600A851EACD0EC006904B9 /* main.m */; };
 		C4600A891EACD0EC006904B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600A881EACD0EC006904B9 /* AppDelegate.m */; };
 		C4600A8C1EACD0EC006904B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600A8B1EACD0EC006904B9 /* ViewController.m */; };
 		C4600A8F1EACD0EC006904B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4600A8D1EACD0EC006904B9 /* Main.storyboard */; };
 		C4600A911EACD0EC006904B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4600A901EACD0EC006904B9 /* Assets.xcassets */; };
 		C4600A941EACD0EC006904B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4600A921EACD0EC006904B9 /* LaunchScreen.storyboard */; };
-		C4600A9F1EACD0EC006904B9 /* blunoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600A9E1EACD0EC006904B9 /* blunoTests.m */; };
 		C4600AAD1EACD5E7006904B9 /* BLEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600AAC1EACD5E7006904B9 /* BLEDevice.m */; };
 		C4600AB01EACD647006904B9 /* BLEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600AAF1EACD647006904B9 /* BLEUtility.m */; };
 		C4600AB61EACD877006904B9 /* DFBlunoDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600AB51EACD877006904B9 /* DFBlunoDevice.m */; };
 		C4600AB91EACD973006904B9 /* DFBlunoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600AB81EACD973006904B9 /* DFBlunoManager.m */; };
 		C4600ABC1EACE90A006904B9 /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4600ABB1EACE90A006904B9 /* ScanController.m */; };
+		C46D79CB1EC654C600C6B75A /* BlunoCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C46D79CA1EC654C600C6B75A /* BlunoCommand.m */; };
+		C46D79CE1EC65C4A00C6B75A /* Pin.m in Sources */ = {isa = PBXBuildFile; fileRef = C46D79CD1EC65C4A00C6B75A /* Pin.m */; };
+		C46D79D11EC6618000C6B75A /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = C46D79D01EC6617F00C6B75A /* Board.m */; };
+		C4AABFE51EC6EA7800106E0E /* BlunoCommand+Commands.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AABFE41EC6EA7800106E0E /* BlunoCommand+Commands.m */; };
+		C4AABFEB1EC6F41400106E0E /* Bluno.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AABFEA1EC6F41400106E0E /* Bluno.m */; };
+		C4AABFEE1EC797A200106E0E /* PinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AABFED1EC797A200106E0E /* PinCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +51,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C45281C31EC49BA90069CDF2 /* BYTE.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BYTE.c; sourceTree = "<group>"; };
+		C45281C41EC49BA90069CDF2 /* BYTE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTE.h; sourceTree = "<group>"; };
+		C45281C51EC49BA90069CDF2 /* BYTE_STRING.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BYTE_STRING.c; sourceTree = "<group>"; };
+		C45281C61EC49BA90069CDF2 /* BYTE_STRING.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTE_STRING.h; sourceTree = "<group>"; };
+		C45281C71EC49BA90069CDF2 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		C45281C81EC49BA90069CDF2 /* pt_application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pt_application.h; sourceTree = "<group>"; };
+		C45281C91EC49BA90069CDF2 /* pt_coder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pt_coder.c; sourceTree = "<group>"; };
+		C45281CA1EC49BA90069CDF2 /* pt_coder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pt_coder.h; sourceTree = "<group>"; };
+		C45281CB1EC49BA90069CDF2 /* pt_type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pt_type.h; sourceTree = "<group>"; };
+		C45281CC1EC49BA90069CDF2 /* SEQUENCE.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SEQUENCE.c; sourceTree = "<group>"; };
+		C45281CD1EC49BA90069CDF2 /* SEQUENCE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEQUENCE.h; sourceTree = "<group>"; };
+		C45281CE1EC49BA90069CDF2 /* tlv_len.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tlv_len.c; sourceTree = "<group>"; };
+		C45281CF1EC49BA90069CDF2 /* tlv_len.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tlv_len.h; sourceTree = "<group>"; };
+		C45281D01EC49BA90069CDF2 /* tlv_tag.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tlv_tag.c; sourceTree = "<group>"; };
+		C45281D11EC49BA90069CDF2 /* tlv_tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tlv_tag.h; sourceTree = "<group>"; };
+		C45281D91EC49BCF0069CDF2 /* Arg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Arg.c; sourceTree = "<group>"; };
+		C45281DA1EC49BCF0069CDF2 /* Arg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arg.h; sourceTree = "<group>"; };
+		C45281DB1EC49BCF0069CDF2 /* Command.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Command.c; sourceTree = "<group>"; };
+		C45281DC1EC49BCF0069CDF2 /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
+		C45281DF1EC49C880069CDF2 /* ArgTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArgTest.m; sourceTree = "<group>"; };
+		C45281E01EC49C880069CDF2 /* BYTE_STRINGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTE_STRINGTest.m; sourceTree = "<group>"; };
+		C45281E11EC49C880069CDF2 /* BYTETest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTETest.m; sourceTree = "<group>"; };
+		C45281E21EC49C880069CDF2 /* CommandTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandTest.m; sourceTree = "<group>"; };
+		C45281E31EC49C880069CDF2 /* LenTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LenTest.m; sourceTree = "<group>"; };
+		C45281E41EC49C880069CDF2 /* TagTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagTest.m; sourceTree = "<group>"; };
 		C4600A811EACD0EC006904B9 /* bluno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bluno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4600A851EACD0EC006904B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4600A871EACD0EC006904B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,7 +87,6 @@
 		C4600A931EACD0EC006904B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4600A951EACD0EC006904B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4600A9A1EACD0EC006904B9 /* blunoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blunoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4600A9E1EACD0EC006904B9 /* blunoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blunoTests.m; sourceTree = "<group>"; };
 		C4600AA01EACD0EC006904B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4600AAB1EACD5E7006904B9 /* BLEDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDevice.h; sourceTree = "<group>"; };
 		C4600AAC1EACD5E7006904B9 /* BLEDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEDevice.m; sourceTree = "<group>"; };
@@ -55,6 +98,19 @@
 		C4600AB81EACD973006904B9 /* DFBlunoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFBlunoManager.m; sourceTree = "<group>"; };
 		C4600ABA1EACE90A006904B9 /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
 		C4600ABB1EACE90A006904B9 /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
+		C46D79C81EC6518800C6B75A /* arduino.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arduino.h; sourceTree = "<group>"; };
+		C46D79C91EC654C600C6B75A /* BlunoCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlunoCommand.h; sourceTree = "<group>"; };
+		C46D79CA1EC654C600C6B75A /* BlunoCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlunoCommand.m; sourceTree = "<group>"; };
+		C46D79CC1EC65C4A00C6B75A /* Pin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pin.h; sourceTree = "<group>"; };
+		C46D79CD1EC65C4A00C6B75A /* Pin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pin.m; sourceTree = "<group>"; };
+		C46D79CF1EC6617F00C6B75A /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		C46D79D01EC6617F00C6B75A /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
+		C4AABFE31EC6EA7800106E0E /* BlunoCommand+Commands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlunoCommand+Commands.h"; sourceTree = "<group>"; };
+		C4AABFE41EC6EA7800106E0E /* BlunoCommand+Commands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BlunoCommand+Commands.m"; sourceTree = "<group>"; };
+		C4AABFE91EC6F41400106E0E /* Bluno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bluno.h; sourceTree = "<group>"; };
+		C4AABFEA1EC6F41400106E0E /* Bluno.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bluno.m; sourceTree = "<group>"; };
+		C4AABFEC1EC797A200106E0E /* PinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinCell.h; sourceTree = "<group>"; };
+		C4AABFED1EC797A200106E0E /* PinCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +131,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C45281C21EC49BA90069CDF2 /* packet-parser */ = {
+			isa = PBXGroup;
+			children = (
+				C45281C31EC49BA90069CDF2 /* BYTE.c */,
+				C45281C41EC49BA90069CDF2 /* BYTE.h */,
+				C45281C51EC49BA90069CDF2 /* BYTE_STRING.c */,
+				C45281C61EC49BA90069CDF2 /* BYTE_STRING.h */,
+				C45281C71EC49BA90069CDF2 /* common.h */,
+				C45281C81EC49BA90069CDF2 /* pt_application.h */,
+				C45281C91EC49BA90069CDF2 /* pt_coder.c */,
+				C45281CA1EC49BA90069CDF2 /* pt_coder.h */,
+				C45281CB1EC49BA90069CDF2 /* pt_type.h */,
+				C45281CC1EC49BA90069CDF2 /* SEQUENCE.c */,
+				C45281CD1EC49BA90069CDF2 /* SEQUENCE.h */,
+				C45281CE1EC49BA90069CDF2 /* tlv_len.c */,
+				C45281CF1EC49BA90069CDF2 /* tlv_len.h */,
+				C45281D01EC49BA90069CDF2 /* tlv_tag.c */,
+				C45281D11EC49BA90069CDF2 /* tlv_tag.h */,
+			);
+			path = "packet-parser";
+			sourceTree = "<group>";
+		};
+		C45281D81EC49BCF0069CDF2 /* command */ = {
+			isa = PBXGroup;
+			children = (
+				C45281D91EC49BCF0069CDF2 /* Arg.c */,
+				C45281DA1EC49BCF0069CDF2 /* Arg.h */,
+				C45281DB1EC49BCF0069CDF2 /* Command.c */,
+				C45281DC1EC49BCF0069CDF2 /* Command.h */,
+				C46D79C91EC654C600C6B75A /* BlunoCommand.h */,
+				C46D79CA1EC654C600C6B75A /* BlunoCommand.m */,
+				C4AABFE31EC6EA7800106E0E /* BlunoCommand+Commands.h */,
+				C4AABFE41EC6EA7800106E0E /* BlunoCommand+Commands.m */,
+			);
+			path = command;
+			sourceTree = "<group>";
+		};
 		C4600A781EACD0EC006904B9 = {
 			isa = PBXGroup;
 			children = (
@@ -96,11 +189,18 @@
 		C4600A831EACD0EC006904B9 /* bluno */ = {
 			isa = PBXGroup;
 			children = (
+				C46D79C71EC6513900C6B75A /* Arduino */,
+				C45281C21EC49BA90069CDF2 /* packet-parser */,
+				C45281D81EC49BCF0069CDF2 /* command */,
 				C4600AA91EACD55D006904B9 /* Bluno */,
+				C4AABFE91EC6F41400106E0E /* Bluno.h */,
+				C4AABFEA1EC6F41400106E0E /* Bluno.m */,
 				C4600A871EACD0EC006904B9 /* AppDelegate.h */,
 				C4600A881EACD0EC006904B9 /* AppDelegate.m */,
 				C4600A8A1EACD0EC006904B9 /* ViewController.h */,
 				C4600A8B1EACD0EC006904B9 /* ViewController.m */,
+				C4AABFEC1EC797A200106E0E /* PinCell.h */,
+				C4AABFED1EC797A200106E0E /* PinCell.m */,
 				C4600ABA1EACE90A006904B9 /* ScanController.h */,
 				C4600ABB1EACE90A006904B9 /* ScanController.m */,
 				C4600A8D1EACD0EC006904B9 /* Main.storyboard */,
@@ -123,7 +223,12 @@
 		C4600A9D1EACD0EC006904B9 /* blunoTests */ = {
 			isa = PBXGroup;
 			children = (
-				C4600A9E1EACD0EC006904B9 /* blunoTests.m */,
+				C45281DF1EC49C880069CDF2 /* ArgTest.m */,
+				C45281E01EC49C880069CDF2 /* BYTE_STRINGTest.m */,
+				C45281E11EC49C880069CDF2 /* BYTETest.m */,
+				C45281E21EC49C880069CDF2 /* CommandTest.m */,
+				C45281E31EC49C880069CDF2 /* LenTest.m */,
+				C45281E41EC49C880069CDF2 /* TagTest.m */,
 				C4600AA01EACD0EC006904B9 /* Info.plist */,
 			);
 			path = blunoTests;
@@ -150,6 +255,18 @@
 				C4600AAF1EACD647006904B9 /* BLEUtility.m */,
 			);
 			path = BLE;
+			sourceTree = "<group>";
+		};
+		C46D79C71EC6513900C6B75A /* Arduino */ = {
+			isa = PBXGroup;
+			children = (
+				C46D79C81EC6518800C6B75A /* arduino.h */,
+				C46D79CC1EC65C4A00C6B75A /* Pin.h */,
+				C46D79CD1EC65C4A00C6B75A /* Pin.m */,
+				C46D79CF1EC6617F00C6B75A /* Board.h */,
+				C46D79D01EC6617F00C6B75A /* Board.m */,
+			);
+			path = Arduino;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,12 +372,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45281DD1EC49BCF0069CDF2 /* Arg.c in Sources */,
 				C4600AB01EACD647006904B9 /* BLEUtility.m in Sources */,
 				C4600A8C1EACD0EC006904B9 /* ViewController.m in Sources */,
+				C45281D41EC49BA90069CDF2 /* pt_coder.c in Sources */,
+				C45281D21EC49BA90069CDF2 /* BYTE.c in Sources */,
+				C4AABFEE1EC797A200106E0E /* PinCell.m in Sources */,
+				C45281D51EC49BA90069CDF2 /* SEQUENCE.c in Sources */,
+				C4AABFEB1EC6F41400106E0E /* Bluno.m in Sources */,
+				C45281D71EC49BA90069CDF2 /* tlv_tag.c in Sources */,
+				C45281D61EC49BA90069CDF2 /* tlv_len.c in Sources */,
 				C4600AB61EACD877006904B9 /* DFBlunoDevice.m in Sources */,
+				C46D79D11EC6618000C6B75A /* Board.m in Sources */,
+				C46D79CB1EC654C600C6B75A /* BlunoCommand.m in Sources */,
+				C45281DE1EC49BCF0069CDF2 /* Command.c in Sources */,
+				C45281D31EC49BA90069CDF2 /* BYTE_STRING.c in Sources */,
 				C4600AAD1EACD5E7006904B9 /* BLEDevice.m in Sources */,
+				C4AABFE51EC6EA7800106E0E /* BlunoCommand+Commands.m in Sources */,
 				C4600ABC1EACE90A006904B9 /* ScanController.m in Sources */,
 				C4600AB91EACD973006904B9 /* DFBlunoManager.m in Sources */,
+				C46D79CE1EC65C4A00C6B75A /* Pin.m in Sources */,
 				C4600A891EACD0EC006904B9 /* AppDelegate.m in Sources */,
 				C4600A861EACD0EC006904B9 /* main.m in Sources */,
 			);
@@ -270,7 +401,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4600A9F1EACD0EC006904B9 /* blunoTests.m in Sources */,
+				C45281EA1EC49C880069CDF2 /* TagTest.m in Sources */,
+				C45281E91EC49C880069CDF2 /* LenTest.m in Sources */,
+				C45281E61EC49C880069CDF2 /* BYTE_STRINGTest.m in Sources */,
+				C45281E71EC49C880069CDF2 /* BYTETest.m in Sources */,
+				C45281E51EC49C880069CDF2 /* ArgTest.m in Sources */,
+				C45281E81EC49C880069CDF2 /* CommandTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +537,7 @@
 				DEVELOPMENT_TEAM = V3B8Z5MTV4;
 				INFOPLIST_FILE = bluno/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsybulin.bluno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -413,6 +550,7 @@
 				DEVELOPMENT_TEAM = V3B8Z5MTV4;
 				INFOPLIST_FILE = bluno/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsybulin.bluno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -461,6 +599,7 @@
 				C4600AA51EACD0EC006904B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4600AA61EACD0EC006904B9 /* Build configuration list for PBXNativeTarget "blunoTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +608,7 @@
 				C4600AA81EACD0EC006904B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,17 +7,17 @@
 //
 
 #import "ViewController.h"
-#import "DFBlunoManager.h"
 #import "ScanController.h"
+#import "Bluno.h"
+#import "PinCell.h"
 
-@interface ViewController () <DFBlunoDelegate> {
-    DFBlunoManager *blunoManager ;
-    NSMutableArray<DFBlunoDevice *> *blunoDevices ;
-    DFBlunoDevice *blunoDevice ;
+@interface ViewController () <BlunoDelegate, PinCellDelegate, UITableViewDataSource, UITableViewDelegate> {
+    BOOL connected ;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *lblStatus ;
-@property (weak, nonatomic) IBOutlet UITextField *lblReply ;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) Bluno *bluno ;
 
 @end
 
@@ -26,13 +26,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad] ;
     
+    connected = NO ;
     self.lblStatus.text = @"Not Ready" ;
-    blunoDevices = [NSMutableArray array] ;
-    
-    blunoManager = [DFBlunoManager sharedInstance] ;
-    blunoManager.delegate = self ;
+    self.bluno = [Bluno bluno] ;
+    self.bluno.delegate = self ;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -41,80 +39,114 @@
 #pragma mark - Actions
 
 - (IBAction)onScan:(id)sender {
-    [blunoDevices removeAllObjects] ;
-    [blunoManager scan] ;
+    [self.bluno close] ;
     [self performSegueWithIdentifier:@"scan" sender:self] ;
 }
 
-- (IBAction)onButton:(id)sender {
-    NSUInteger tag = ((UIButton *) sender).tag ;
-    if (blunoDevice.bReadyToWrite) {
-        [blunoManager writeDataToDevice:[[NSString stringWithFormat:@"D%02lu", (unsigned long)tag] dataUsingEncoding:NSUTF8StringEncoding] Device:blunoDevice] ;
-    }
-}
-- (IBAction)onPoint:(id)sender {
-    if (blunoDevice.bReadyToWrite) {
-        [blunoManager writeDataToDevice:[@"P" dataUsingEncoding:NSUTF8StringEncoding] Device:blunoDevice] ;
-    }
+- (IBAction)onClose:(id)sender {
+    [self.bluno disconnect] ;
 }
 
-- (IBAction)onClear:(id)sender {
-    if (blunoDevice.bReadyToWrite) {
-        [blunoManager writeDataToDevice:[@"C" dataUsingEncoding:NSUTF8StringEncoding] Device:blunoDevice] ;
-    }
+#pragma mark - <PinCellDelegate>
+
+- (void)pinCell:(PinCell *)pinCell didChangeMode:(PinMode)mode {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.bluno setMode:mode forPin:pinCell.pin] ;
+    }) ;
+}
+
+- (void)pinCell:(PinCell *)pinCell didChangeValue:(NSUInteger)value {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.bluno setValue:value forPin:pinCell.pin] ;
+    }) ;
+}
+
+- (void)pinCell:(PinCell *)pinCell didRequestValue:(id)__ {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.bluno getValueforPin:pinCell.pin] ;
+    }) ;
 }
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"scan"]) {
-        ((ScanController *)segue.destinationViewController).devices = blunoDevices ;
+        ((ScanController *)segue.destinationViewController).devices = self.bluno.devices ;
     }
 }
 
-#pragma mark - <DFBlunoDelegate>
+#pragma mark - <BlunoDelegate>
 
-- (void)bleDidUpdateState:(BOOL)bleSupported {
-    if (bleSupported) {
-        [blunoManager scan] ;
-    }
-}
-
-- (void)didDiscoverDevice:(DFBlunoDevice*)dev {
-    BOOL repeat = NO ;
-    for (DFBlunoDevice *device in blunoDevices) {
-        if ([device isEqual:dev]) {
-            repeat = YES ;
-            break ;
-        }
-    }
-    
-    if (!repeat) {
-        [blunoDevices addObject:dev] ;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"bdDidDiscoverDevice" object:dev] ;
-    }
-}
-
-- (void)readyToCommunicate:(DFBlunoDevice*)dev  {
-    blunoDevice = dev ;
+- (void)didConnectDevice {
     self.lblStatus.text = @"Ready" ;
+    connected = YES ;
+    [self.tableView reloadData] ;
 }
 
-- (void)didDisconnectDevice:(DFBlunoDevice*)dev {
-    if ([dev isEqual:blunoDevice]) {
-        self.lblStatus.text = @"Not Ready" ;
-        blunoDevice = nil ;
+- (void)didDisconnectDevice {
+    connected = NO ;
+    self.lblStatus.text = @"Not Ready" ;
+    [self.tableView reloadData] ;
+}
+
+- (void)tableView:(UITableView *)tableView reloadPin:(Pin *)pin {
+    if (!pin) {
+        return ;
     }
-}
-
-- (void)didWriteData:(DFBlunoDevice*)dev {
     
+    NSIndexPath *pathToReload = [NSIndexPath indexPathForRow:[self.bluno.pins indexOfObject:pin] inSection:0] ;
+    [self.tableView beginUpdates] ;
+    [tableView reloadRowsAtIndexPaths:@[pathToReload] withRowAnimation:UITableViewRowAnimationNone] ;
+    [self.tableView endUpdates] ;
 }
 
-- (void)didReceiveData:(NSData*)data Device:(DFBlunoDevice*)dev {
-    if ([dev isEqual:blunoDevice]) {
-        self.lblReply.text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] ;
+- (void)didChangeMode:(Pin *)pin {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self tableView:self.tableView reloadPin:pin] ;
+    }) ;
+}
+
+- (void)didChangeValue:(Pin *)pin {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self tableView:self.tableView reloadPin:pin] ;
+    }) ;
+}
+
+#pragma mark - <UITableViewDataSource>
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    NSInteger numOfSections = 0 ;
+    if (connected) {
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine ;
+        numOfSections = 1 ;
+        self.tableView.backgroundView = nil ;
+    } else {
+        UILabel *noDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, self.tableView.bounds.size.height)] ;
+        noDataLabel.text = @"No pins available" ;
+        noDataLabel.textColor        = [UIColor blackColor] ;
+        noDataLabel.textAlignment    = NSTextAlignmentCenter ;
+        self.tableView.backgroundView = noDataLabel ;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone ;
     }
+    
+    return numOfSections ;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return connected && section == 0 ? self.bluno.pins.count : 0 ;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    PinCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PinCell"] ;
+    cell.pin = self.bluno.pins[indexPath.row] ;
+    cell.delegate = self ;
+    return cell ;
+}
+
+#pragma mark - <UITableViewDelegate>
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [(PinCell *)cell updateCell] ;
 }
 
 @end
